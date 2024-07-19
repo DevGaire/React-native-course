@@ -51,7 +51,7 @@ const Login = () => {
           borderRadius: 10,
         paddingHorizontal: 20,
         }}
-         onChangeText={(e) => setValue(value.value1(e))}
+         onChangeText={(e) => setValue({ value1: e})}
         
         />
         
@@ -61,7 +61,9 @@ const Login = () => {
           margin: 2,
           borderRadius: 10,
         paddingHorizontal: 20,
-      }} />
+        }}
+        onChangeText={(e) => setValue({ value2: e})}
+        />
       <MyButton tittle={'Login'} onPress={onLogin} />
 </View>
     </View>
