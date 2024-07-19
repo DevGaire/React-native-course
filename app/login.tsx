@@ -6,7 +6,11 @@ import { router, useRouter } from 'expo-router'
 
 const Login = () => {
   
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState({
+    value1: "",
+    value2: "",
+  });
+
 
 
   const router = useRouter(); // navigate the page  use this !! //
@@ -47,7 +51,7 @@ const Login = () => {
           borderRadius: 10,
         paddingHorizontal: 20,
         }}
-         onChangeText={(e) => setValue(e)}
+         onChangeText={(e) => setValue(value.value1(e))}
         
         />
         
